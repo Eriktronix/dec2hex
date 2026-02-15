@@ -1,0 +1,21 @@
+# ----------------------------
+# Python dependencies for dec-to-hex project
+# ----------------------------
+
+# Flask is the web framework used for the backend server
+flask
+
+# Flask-CORS allows the frontend (running on a different URL) 
+# to access the backend without cross-origin errors
+flask-cors
+
+# ----------------------------
+# Instructions:
+# 1. Place this file in the root of your repository.
+# 2. In Codespaces terminal, install dependencies with:
+#       pip install -r requirements.txt
+# 3. After installation, run the backend:
+#       cd backend
+#       python app.py
+# 4. Forward port 5000 in Codespaces and update your frontend fetch URL if needed.
+# ----------------------------
