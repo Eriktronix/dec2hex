@@ -3,14 +3,17 @@ const input = document.getElementById('decimalInput');  // Input field for decim
 const btn = document.getElementById('convertBtn');      // Button to trigger conversion
 const result = document.getElementById('result');       // Span to display the hexadecimal result
 
+// Put your backend URL in a variable for easy updates
+const BACKEND_URL = 'https://fluffy-cod-4j6xr67r6wr3q496-5000.app.github.dev/convert';
+
 // Add a click event listener to the button
 btn.addEventListener('click', async () => {
     const number = input.value;                         // Get the value from input
     if (!number) return alert("Skriv ett tal!");       // Alert if input is empty
 
     try {
-        // Send a POST request to the backend to convert the number
-        const response = await fetch('http://localhost:5000/convert', { // Change this to Codespaces forwarded URL if needed
+        // Send a POST request to the backend
+        const response = await fetch(BACKEND_URL, {
             method: 'POST',                               // Use POST method
             headers: {'Content-Type': 'application/json'}, // Send JSON
             body: JSON.stringify({number})               // JSON payload: {"number": 42}
