@@ -6,7 +6,7 @@ const result = document.getElementById('result');       // Span to display the h
 // Put your backend URL in a variable for easy updates
 
 // const BACKEND_URL = 'https://fluffy-cod-4j6xr67r6wr3q496-5000.app.github.dev/convert'; //for android tablet
-const BACKEND_URL = 'https://4wq4qb9v-5000.euw.devtunnels.ms/'; //for PC
+const BACKEND_URL = 'https://4wq4qb9v-5000.euw.devtunnels.ms/convert'; //for PC
 
 // Add a click event listener to the button
 btn.addEventListener('click', async () => {
