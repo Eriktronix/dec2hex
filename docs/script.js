@@ -3,10 +3,13 @@ const input = document.getElementById('decimalInput');  // Input field for decim
 const btn = document.getElementById('convertBtn');      // Button to trigger conversion
 const result = document.getElementById('result');       // Span to display the hexadecimal result
 
-// Put your backend URL in a variable for easy updates
-
-// const BACKEND_URL = 'https://fluffy-cod-4j6xr67r6wr3q496-5000.app.github.dev/convert'; //for android tablet
-const BACKEND_URL = 'https://4wq4qb9v-5000.euw.devtunnels.ms/convert'; //for PC
+// Backend endpoint:
+// 1) Set PROD_API_URL to your HTTPS tunnel URL (used by GitHub Pages).
+// 2) Use ?api=https://host/convert to override at runtime.
+// 3) If PROD_API_URL is blank, fallback to local Flask server.
+const PROD_API_URL = 'https://4wq4qb9v-5000.euw.devtunnels.ms/convert'; // Example: 'https://abcd-5000.euw.devtunnels.ms/convert'
+const apiOverride = new URLSearchParams(window.location.search).get('api');
+const BACKEND_URL = apiOverride || PROD_API_URL || 'http://127.0.0.1:5000/convert';
 
 // Add a click event listener to the button
 btn.addEventListener('click', async () => {
